@@ -17,3 +17,9 @@ echo "Result is: "$result3
 
 result4=`echo "scale=2;$input1 % $input2 + $input3" | bc`
 echo "Result is: "$result4
+
+arithmeticOp[result]=$result
+arithmeticOp[result2]=$result2
+arithmeticOp[result3]=$result3
+arithmeticOp[result4]=$result4
+
