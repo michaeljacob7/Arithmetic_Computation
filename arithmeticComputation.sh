@@ -23,3 +23,8 @@ arithmeticOp[result2]=$result2
 arithmeticOp[result3]=$result3
 arithmeticOp[result4]=$result4
 
+for((i=0; i<=${arithmeticOp[@]}; i++))
+do
+	array[i]=${arithmeticOp[result$((i+1))]}
+done
+
