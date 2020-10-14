@@ -12,3 +12,5 @@ echo "Result is: "$result
 result2=$(($input1*$input2+$input3))
 echo "Result is: "$result2
 
+result3=`echo "scal=2;$input3 + $input1 / $input2 " |bc`
+echo "Result is: "$result3
