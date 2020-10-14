@@ -43,7 +43,25 @@ function descOrder()
 			fi
 		done
 	done
-	echo "Descending order"${array[@]}
+	echo "Descending order: "${array[@]}
 }
 descOrder ${array[@]}
+
+function ascendOrder()
+{
+	for(( i=0; i<$(#array[@]}; i++ ))
+	do
+		for(( j=0; j<${#array[@]}-1; j++ ))
+		do
+			if(( $(echo "${array[j+1]} < ${array[j]}" | bc -1 ) ))
+			then
+				temp=${array[j]}
+				array[j]=${array[j+1]}
+				array[j+1]=$temp
+			fi
+		done
+	done
+	echo "Ascending order: "${array[@]}
+}
+ascendOrder ${array[@]}
 
