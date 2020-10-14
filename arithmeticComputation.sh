@@ -8,3 +8,7 @@ read -p "Enter the third input: " input3
 
 result=$(($input1+$input2*$input3))
 echo "Result is: "$result
+
+result2=$(($input1*$input2+$input3))
+echo "Result is: "$result2
+
